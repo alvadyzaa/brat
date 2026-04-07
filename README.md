@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# Brat Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Brat Generator is a simple web app for creating custom cover images inspired by the iconic Brat-style aesthetic. Type your own text, adjust the background and blur, then export the result as a high-quality image in seconds.
 
-Currently, two official plugins are available:
+This project is built for people who want a fast, lightweight editor without opening design software. It is especially useful for making memes, social posts, mock covers, or personal artwork with the familiar minimalist look.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What It Does
 
-## React Compiler
+- Lets you type any title or phrase and preview it instantly
+- Adjusts background color, text size, and blur level
+- Exports the final design as `PNG` or `JPG`
+- Includes a one-click copy action for supported browsers
+- Works in the browser with a responsive interface for desktop and mobile
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Why This Project Exists
 
-## Expanding the ESLint configuration
+The goal of this app is to make the Brat-inspired cover style quick and accessible. Instead of recreating the look manually in a design tool, users can generate a clean result right in the browser and download it immediately.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Built With
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React 19
+- TypeScript
+- Vite
+- Framer Motion
+- Tailwind CSS
+- `html-to-image`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Run Locally
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the local URL from Vite, usually `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Production Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
+
+## Project Structure
+
+```text
+brat/
+|- public/
+|- src/
+|  |- assets/
+|  |- App.tsx
+|  |- main.tsx
+|- index.html
+|- package.json
+```
+
+## Notes
+
+- The generated design is inspired by a recognizable album-cover style and is intended as a creative fan-made tool.
+- Clipboard copy depends on browser support. If copy is unavailable, downloading still works normally.
+
+## License
+
+This project is currently shared without an explicit license. Add one if you plan to distribute or accept contributions publicly.
