@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Made by Keith favicon</title>
+  <desc id="desc">Minimal monochrome favicon inspired by the made by keith wordmark.</desc>
+  <rect width="64" height="64" rx="16" fill="#f6f4ef" />
+  <text
+    x="10"
+    y="19"
+    fill="#111111"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    font-weight="500"
+    letter-spacing="-0.4"
+  >
+    made by
+  </text>
+  <text
+    x="8"
+    y="49"
+    fill="#111111"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="34"
+    font-weight="500"
+    letter-spacing="-2"
+  >
+    k.
+  </text>
+</svg>
